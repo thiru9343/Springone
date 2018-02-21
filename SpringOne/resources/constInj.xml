@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- Definition for textEditor bean -->
+	<bean id="textEditor" class="com.spring.constInj.TextEditor">
+		<constructor-arg ref="spellChecker" />
+		<constructor-arg><null/></constructor-arg>
+	</bean>
+
+	<!-- Definition for spellChecker bean -->
+	<bean id="spellChecker" class="com.spring.constInj.SpellChecker">
+	</bean>
+<!-- 
+	<bean id="foo" class="x.y.Foo">
+		<constructor-arg ref="bar" />
+		<constructor-arg ref="baz" />
+	</bean>
+
+	<bean id="bar" class="x.y.Bar" />
+	<bean id="baz" class="x.y.Baz" />
+
+
+	<bean id="exampleBean" class="examples.ExampleBean">
+		<constructor-arg type="int" value="2001" />
+		<constructor-arg type="java.lang.String" value="Zara" />
+	</bean>
+
+	void ExampleBean(String name, int year)
+
+	<bean id="exampleBean" class="examples.ExampleBean">
+		<constructor-arg index="0" value="2001" />
+		<constructor-arg index="1" value="22" />
+		<constructor-arg index="2" value="Zara" />
+		<constructor-arg index="3" ref="spellChecker" />
+	</bean>
+	
+	void ExampleBean(int year,int age, String name, SpellChecker checker)
+-->
+</beans>
